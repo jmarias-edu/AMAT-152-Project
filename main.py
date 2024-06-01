@@ -1,21 +1,15 @@
-import pygame
+def printMenu():
+    print("[0] Exit")
 
-pygame.init()
+def getChoice(prompt):
+    return int(input(prompt))
 
-pygame.display.set_caption('Quick Start')
-window_surface = pygame.display.set_mode((800, 600))
+def main():
+    print("Hello World!")
 
-background = pygame.Surface((800, 600))
-background.fill(pygame.Color('#000000'))
-
-is_running = True
-
-while is_running:
-
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            is_running = False
-
-    window_surface.blit(background, (0, 0))
-
-    pygame.display.update()
+    while True:
+        printMenu()
+        choice = getChoice("What is your choice: ")
+        if(choice == 0):
+            break
+main()

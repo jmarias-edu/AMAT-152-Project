@@ -96,18 +96,24 @@ def SIRMenu():
     choice = getInt("Choose data option: ")
     clear()
 
+    pop = getInt("Input initial population: ")
+    days = getInt("Input number of days: ")
+    inf = getInt("Input initial number of infected: ")
+
     if(choice==1):
-        pop = getInt("Input initial population: ")
-        days = getInt("Input number of days: ")
-        inf = getInt("Input initial number of infected: ")
         S, I, R = SIRSimulation(pop, inf, constants.PERTUSSIS_CR, constants.PERTUSSIS_RR, days)
         plot_simulation(S, I, R, days)
+
     if(choice==2):
-        pass
+        print("Other Diseases")
+        print("[1] COVID Delta Variant")
+        print("[2] Rhinovirus (Common Cold)")
+        choice1 = getInt("Choose Disease: ")
+        if(choice1==1):
+            S, I, R = SIRSimulation(pop, inf, constants.COVID_CR, constants.COVID_RR, days)
+            plot_simulation(S, I, R, days)
+
     if(choice==3):
-        pop = getInt("Input initial population: ")
-        days = getInt("Input number of days: ")
-        inf = getInt("Input initial number of infected: ")
         cr = getFloat("Input Contact Rate: ")
         rr = getFloat("Input Recovery Rate: ")
         S, I, R = SIRSimulation(pop, inf, cr, rr, days)
@@ -122,18 +128,23 @@ def SIRMCMenu():
     choice = getInt("Choose data option: ")
     clear()
 
+    pop = getInt("Input initial population: ")
+    days = getInt("Input number of days: ")
+    inf = getInt("Input initial number of infected: ")
+
     if(choice==1):
-        pop = getInt("Input initial population: ")
-        days = getInt("Input number of days: ")
-        inf = getInt("Input initial number of infected: ")
         S, I, R = SIRMonteCarloSimulation(pop, inf, constants.PERTUSSIS_CR_RANGE, constants.PERTUSSIS_RR_RANGE, days)
         plot_simulation(S, I, R, days)
     if(choice==2):
-        pass
+        print("Other Diseases")
+        print("[1] COVID Delta Variant")
+        print("[2] Rhinovirus (Common Cold)")
+        choice1 = getInt("Choose Disease: ")
+        if(choice1==1):
+            S, I, R = SIRMonteCarloSimulation(pop, inf, constants.COVID_CR_RANGE, constants.COVID_RR_RANGE, days)
+            plot_simulation(S, I, R, days)
+        
     if(choice==3):
-        pop = getInt("Input initial population: ")
-        days = getInt("Input number of days: ")
-        inf = getInt("Input initial number of infected: ")
         cr1 = getFloat("Input Contact Rate Range start: ")
         cr2 = getFloat("Input Contact Rate Range end: ")
         rr1 = getFloat("Input Recovery Rate start: ")

@@ -33,5 +33,5 @@ COVID_RR_RANGE = (0.1, 0.13)
 # Rhinovirus (Common cold)
 COLD_TR = 0.6
 COLD_RR = 0.2
-COLD_TR_RANGE = (0.9, 1.17)
-COLD_RR_RANGE = (0.1, 0.13)
+COLD_TR_RANGE = (0.42, 1.5)
+COLD_RR_RANGE = (0.14, 0.5)

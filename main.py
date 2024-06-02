@@ -113,6 +113,9 @@ def SIRMenu():
     choice = getInt("Choose data option: ")
     clear()
 
+    if(choice==0):
+        return
+
     pop = getInt("Input initial population: ")
     days = getInt("Input number of days: ")
     inf = getInt("Input initial number of infected: ")
@@ -124,7 +127,7 @@ def SIRMenu():
 
 
     # SIR Simulation for Other Diseases
-    if(choice==2):
+    elif(choice==2):
         print("Other Diseases")
         print("[1] COVID Delta Variant")
         print("[2] Rhinovirus (Common Cold)")
@@ -137,7 +140,7 @@ def SIRMenu():
             plot_simulation(S, I, R, days, "Rhinovirus (Common Cold) SIR Model Simulation")
 
     # SIR Simulation for own data
-    if(choice==3):
+    elif(choice==3):
         title = input("Disease name: ")
         tr = getFloat("Input Contact Rate: ")
         rr = getFloat("Input Recovery Rate: ")
@@ -154,6 +157,9 @@ def SIRMCMenu():
     choice = getInt("Choose data option: ")
     clear()
 
+    if(choice==0):
+        return
+
     pop = getInt("Input initial population: ")
     days = getInt("Input number of days: ")
     inf = getInt("Input initial number of infected: ")
@@ -164,7 +170,7 @@ def SIRMCMenu():
         plot_simulation(S, I, R, days, "Pertussis SIR Monte Carlo Model Simulation")
     
     # SIR Monte Carlo Simulation for Other Diseases
-    if(choice==2):
+    elif(choice==2):
         print("Other Diseases")
         print("[1] COVID Delta Variant")
         print("[2] Rhinovirus (Common Cold)")
@@ -177,7 +183,7 @@ def SIRMCMenu():
             plot_simulation(S, I, R, days, "Rhinovirus (Common Cold) SIR Monte Carlo Model Simulation")
     
     # SIR Monte Carlo Simulation for Own Data
-    if(choice==3):
+    elif(choice==3):
         title = input("Disease name: ")
         tr1 = getFloat("Input Contact Rate Range start: ")
         tr2 = getFloat("Input Contact Rate Range end: ")

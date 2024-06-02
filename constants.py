@@ -9,9 +9,9 @@
 # 15-17 People on average infected
 
 # Pertussis Constants
-PERTUSSIS_CR = 1.5
+PERTUSSIS_TR = 1.5
 PERTUSSIS_RR = 0.1
-PERTUSSIS_CR_RANGE = (0.8, 2.72)
+PERTUSSIS_TR_RANGE = (0.8, 2.72)
 PERTUSSIS_RR_RANGE = (0.05, 0.17)
 
 # COVID 
@@ -20,9 +20,9 @@ PERTUSSIS_RR_RANGE = (0.05, 0.17)
 # 5 People on average infected
 
 # COVID DELTA Variant Constants
-COVID_CR = 0.9
+COVID_TR = 0.9
 COVID_RR = 0.11
-COVID_CR_RANGE = (0.9, 1.17)
+COVID_TR_RANGE = (0.9, 1.17)
 COVID_RR_RANGE = (0.1, 0.13)
 
 # Rhinovirus (Common cold)
@@ -31,7 +31,7 @@ COVID_RR_RANGE = (0.1, 0.13)
 # 3 People on average infected
 
 # Rhinovirus (Common cold)
-COLD_CR = 0.9
-COLD_RR = 0.11
-COLD_CR_RANGE = (0.9, 1.17)
+COLD_TR = 0.6
+COLD_RR = 0.2
+COLD_TR_RANGE = (0.9, 1.17)
 COLD_RR_RANGE = (0.1, 0.13)
